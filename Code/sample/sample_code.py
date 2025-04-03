@@ -30,10 +30,10 @@ def visualize_frame(loader_data):
 
 def main():
     d_train, d_val, d_test = CreateDOVeDatasets(os.path.abspath('../../Dataset/sample'), frames_per_clip=10, raw=False, granularity=3)
-    loader_train = DataLoader(d_train, batch_size=23, shuffle=True, num_workers=3)
+    loader_train = DataLoader(d_train, batch_size=32, shuffle=True, num_workers=3)
 
-    #get_dataloader_info(loader_train)
-    visualize_frame(loader_train) 
+    get_dataloader_info(loader_train)
+    #visualize_frame(loader_train) 
 
 
 if __name__ == "__main__":
